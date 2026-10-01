@@ -1,0 +1,10 @@
+# robots.txt — PieIt.net
+User-agent: *
+Allow: /
+Disallow: /contact.php
+Disallow: /_build/
+
+# Crawl-delay for aggressive bots
+Crawl-delay: 1
+
+Sitemap: https://www.pieit.net/sitemap.xml

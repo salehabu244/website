@@ -1,0 +1,54 @@
+# =====================================================================
+# PieIt.net — Apache configuration
+# Compression, caching, security headers and defaults for performance.
+# (Optional. Remove if your host does not support .htaccess.)
+# =====================================================================
+
+# ---------- Defaults ----------
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+# ---------- Gzip / Deflate compression ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------- Browser caching ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ---------- Security headers ----------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# ---------- Block building sources ----------
+RedirectMatch 403 ^/_build/.*$
+
+# ---------- Error pages ----------
+ErrorDocument 404 /index.html
+
+# ---------- Canonical host (force HTTPS + non-www) ----------
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off [OR]
+#   RewriteCond %{HTTP_HOST} ^www\. [NC]
+#   RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+#   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+# </IfModule>

@@ -1,0 +1,149 @@
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact</span>
+      </nav>
+      <h1>Let's Talk About Your Project</h1>
+      <p>Tell us what you need — a high-performance VPS, enterprise email, a custom ERP, cybersecurity or a complete IT infrastructure. Our team will get back to you shortly.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="form-card" data-reveal="left">
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <h2 class="mb-3">Send Us a Message</h2>
+          <form id="quoteForm" action="contact.php" method="post" data-endpoint="contact.php" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" required>
+                <span class="err"></span>
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Company name">
+                <span class="err"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+                <span class="err"></span>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+880 1XXX-XXXXXX">
+                <span class="err"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="">Select a service</option>
+                  <option>VPS / VM</option>
+                  <option>Email Solution</option>
+                  <option>Domain &amp; Hosting</option>
+                  <option>Software Development</option>
+                  <option>ERP Development</option>
+                  <option>Enterprise Software</option>
+                  <option>Cybersecurity</option>
+                  <option>Cloud PABX</option>
+                  <option>Other</option>
+                </select>
+                <span class="err"></span>
+              </div>
+              <div class="field">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a budget range</option>
+                  <option>Under BDT 50,000</option>
+                  <option>BDT 50,000 – 2,00,000</option>
+                  <option>BDT 2,00,000 – 10,00,000</option>
+                  <option>BDT 10,00,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="err"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="requirement">Project / Requirement</label>
+              <input type="text" id="requirement" name="requirement" placeholder="e.g. ERP for a manufacturing company">
+              <span class="err"></span>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us about your project, timeline and goals…" required></textarea>
+              <span class="err"></span>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" class="hp-input" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="quoteSubmit">
+              <span class="spinner" style="display:none"></span>
+              <span class="btn-ic"><i class="fa-solid fa-paper-plane"></i></span>
+              <span class="btn-label">Send Request</span>
+            </button>
+            <p class="form-note">By submitting, you agree to be contacted about your enquiry. We never share your details.</p>
+          </form>
+        </div>
+
+        <aside data-reveal="right">
+          <div class="info-card">
+            <span class="ii"><i class="fa-solid fa-headset"></i></span>
+            <div><h4>Sales</h4><a href="mailto:sales@pieit.net">sales@pieit.net</a><p>New projects, pricing and quotations.</p></div>
+          </div>
+          <div class="info-card">
+            <span class="ii"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <div><h4>Technical Support</h4><a href="mailto:support@pieit.net">support@pieit.net</a><p>24/7 help for existing customers.</p></div>
+          </div>
+          <div class="info-card">
+            <span class="ii"><i class="fa-solid fa-briefcase"></i></span>
+            <div><h4>Business Inquiry</h4><a href="mailto:info@pieit.net">info@pieit.net</a><p>Partnerships and general questions.</p></div>
+          </div>
+          <div class="info-card">
+            <span class="ii"><i class="fa-solid fa-phone"></i></span>
+            <div><h4>Call Us</h4><a href="tel:+8801700000000">+880 1700-000000</a><p>Sat–Thu, 9:00–18:00 (BST)</p></div>
+          </div>
+          <div class="info-card">
+            <span class="ii"><i class="fa-solid fa-location-dot"></i></span>
+            <div><h4>Office</h4><p style="margin:0">Dhaka, Bangladesh</p><p>BDIX-connected data center</p></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="faq">
+    <div class="container">
+      <div class="sec-head" data-reveal><span class="eyebrow">FAQ</span><h2>Frequently Asked Questions</h2></div>
+      <div class="max-820 mx-auto" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">How quickly will I hear back?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Our team typically responds within one business day. For urgent infrastructure issues, existing customers can reach 24/7 support at support@pieit.net.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Do you work with companies outside Bangladesh?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes. We serve customers in Bangladesh and international markets, with infrastructure tuned for both local BDIX performance and global reach.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Can you host software you build for us?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Absolutely. Software and infrastructure under one partner is our core strength — we can build, deploy, host, secure and support your application end to end.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Do you offer dedicated servers and mail servers?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes. We offer cloud VPS/VMs, dedicated servers and dedicated mail servers, with optional security, backup and managed maintenance services.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
